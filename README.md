@@ -47,14 +47,16 @@ local options = {
 }
 exports.Rm_Spawn:Selector(lastlocation,options)
 ```
+<details>
+<summary> Getting Started for ui </summary>
 ## Requirements for developing ui
 * [Node > v10.6](https://nodejs.org/en/)
 * [Yarn](https://yarnpkg.com/getting-started/install) (Preferred but not required)
 
 *A basic understanding of the modern web development workflow. If you don't 
 know this yet, React might not be for you just yet.*
-<details>
-#<summary> Getting Started for ui </summary>
+ 
+## Getting Started
 
 First clone the repository or use the template option and place
 it within your `resources` folder
