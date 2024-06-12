@@ -1,11 +1,10 @@
 fx_version "cerulean"
 games {
-  "gta5",
-  "rdr3"
+  "gta5"
 }
 
-description "React + Mantine Boilerplate"
-author "SYNO"
+description "A Standalone Spawn Selector"
+author "Remin Mohammed"
 version '1.0.0'
 
 lua54 'yes'
