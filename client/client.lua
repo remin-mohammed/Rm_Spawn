@@ -1,14 +1,13 @@
-local ESX = exports["es_extended"]:getSharedObject()
-spawnNames = {}
-spawnData = {}
+SPAWNNAMES = {}
+SPAWNDATA = {}
 local cam = nil
 local lastloc = {}
 local wait = nil
 
 for k, v in pairs(Config.Spawns) do
-	table.insert(spawnData, v)
+	table.insert(SPAWNDATA, v)
 
-	table.insert(spawnNames, { v.name })
+	table.insert(SPAWNNAMES, { v.name })
 end
 
 
@@ -33,13 +32,16 @@ end)
 RegisterNUICallback('getConfig', function(_, cb)
   cb({
     primaryColor = Config.PrimaryColor,
-    primaryShade = Config.PrimaryShade
+    primaryShade = Config.PrimaryShade,
+	buttoncolor = Config.ButtonColor,
+	bordercolor = Config.BorderColor
+
   })
 end)
 
 RegisterNUICallback('getLocationsData', function(_, cb)
 	cb({
-		spawnNames
+		SPAWNNAMES
 	})
   end)
   
@@ -92,8 +94,8 @@ exports('Selector', function(coord,options)
 	end
 	local PlayerData = GetEntityCoords(PlayerPedId())       
 	SetFocusPosAndVel(125.9797, 6575.4023, 42.0203, 352.2534)                                                         
-	cam = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA",  125.9797, 6575.4023, 42.0203 + 50, -50.00, 0.00, 0.00, 100.00, false, 0)
-	SetCamActive(cam, true)
+	CAM = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA",  125.9797, 6575.4023, 42.0203 + 50, -50.00, 0.00, 0.00, 100.00, false, 0)
+	SetCamActive(CAM, true)
 	RenderScriptCams(true, false, 1, true, true)
 	SetNuiFocus(true,true)
 	OpenNui(true)	
@@ -114,7 +116,7 @@ preview = function(name)
 		   DoScreenFadeOut(1000)
 			Citizen.Wait(2000)
 			DoScreenFadeIn(1000)
-			SetCamCoord(cam, spawns[i].camera.x, spawns[i].camera.y, spawns[i].camera.z + 50)
+			SetCamCoord(CAM, spawns[i].camera.x, spawns[i].camera.y, spawns[i].camera.z + 50)
 			SetFocusPosAndVel(spawns[i].camera.x, spawns[i].camera.y, spawns[i].camera.z)
 		
 		end
@@ -127,11 +129,11 @@ spawn = function(name)
 	or LocalPlayer.state?.isDead and lastloc
 	or LocalPlayer.state?.dead and lastloc
 	or IsPlayerDead(PlayerId()) and lastloc then 
-		SetCamParams(cam, lastloc.x, lastloc.y, lastloc.z + 800.0, -85.00, 0.00, 0.00, 100.00, 1, 0, 0, 2)
+		SetCamParams(CAM, lastloc.x, lastloc.y, lastloc.z + 800.0, -85.00, 0.00, 0.00, 100.00, 1, 0, 0, 2)
 		PlayerSpawn(lastloc)
 	end
 	if name == 'lastloc' then
-		SetCamParams(cam, lastloc.x, lastloc.y, lastloc.z + 800.0, -85.00, 0.00, 0.00, 100.00, 1, 0, 0, 2)
+		SetCamParams(CAM, lastloc.x, lastloc.y, lastloc.z + 800.0, -85.00, 0.00, 0.00, 100.00, 1, 0, 0, 2)
 		PlayerSpawn(lastloc)
 	end	
 	for i = 1 , #spawns do
@@ -150,7 +152,7 @@ PlayerSpawn = function(coord)
 	SetNuiFocus(false,false)
 	local ped = PlayerPedId()
 	FreezeEntityPosition(ped, true)
-	SetCamParams(cam, coord.x, coord.y, coord.z+4.2, -85.00, 0.00, 0.00, 50.00, 2000, 0, 0, 2)
+	SetCamParams(CAM, coord.x, coord.y, coord.z+4.2, -85.00, 0.00, 0.00, 50.00, 2000, 0, 0, 2)
 	Wait(2000)
 	local coord = vec4(coord.x, coord.y, coord.z, coord.w)
 	SetFocusPosAndVel(coord.x,coord.y,coord.z)
@@ -158,14 +160,14 @@ PlayerSpawn = function(coord)
 	SetEntityCoords(ped,coord.x,coord.y,coord.z-0.9)
 	SetEntityHeading(ped,coord.w)
 	SetFocusEntity(ped)
-	SetCamParams(cam, coord.x+0.5, coord.y-7, coord.z, 0.00, 0.00, 0.00, 20.00, 1000, 0, 0, 2)
+	SetCamParams(CAM, coord.x+0.5, coord.y-7, coord.z, 0.00, 0.00, 0.00, 20.00, 1000, 0, 0, 2)
 	Wait(2000)
 	RenderScriptCams(false, true, 3000, true, true)
 	while not HasCollisionLoadedAroundEntity(ped) do Wait(1) end
 	FreezeEntityPosition(ped, false)
 	Wait(3000)
-	if DoesCamExist(cam) then
-		SetCamActive(cam, false)
+	if DoesCamExist(CAM) then
+		SetCamActive(CAM, false)
 		print("ola")
 	end
 end
