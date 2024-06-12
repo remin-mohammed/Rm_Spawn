@@ -54,14 +54,16 @@ export default function AppComp() {
         console.error("Error fetching locations data:", error);
       });
 
-      fetchNui("getColorConfig")
+      fetchNui("getConfig")
       .then((config) => {
         setButtonStyles({
           primaryColor: config.primaryColor,
           primaryShade: config.primaryShade,
           buttonColor: config.buttoncolor,
           borderColor: config.bordercolor,
+
         });
+        console.log(config.buttoncolor);
       })
       .catch((error) => {
         console.error("Error fetching color config:", error);
@@ -124,7 +126,7 @@ export default function AppComp() {
     
     fetchNui("nuicb", currentLocation) // Trigger client event with the current location
     handleClose()
-     
+    
   };
 
 
