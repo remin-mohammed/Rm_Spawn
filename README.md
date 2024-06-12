@@ -98,7 +98,7 @@ npm run build
 yarn build 
 ```
 </details>
-## Disclaimer
+# Disclamer
 
 This is purely not my stuff  
 credits:-
