@@ -25,7 +25,7 @@ property, job locations.
 local lastlocation = {x = coord.x, y = coord.y, z = coord.z, heading = coord.w}
 exports.Rm_Spwan:Selector(lastlocation)
 ```
-#Note if resources name is changed
+# Note if resources name is changed
 
 ```
 local lastlocation = {x = coord.x, y = coord.y, z = coord.z, heading = coord.w}
@@ -100,7 +100,7 @@ yarn build
 
 This is purely not my stuff  
 credits:-
- https://github.com/project-error/fivem-react-boilerplate-lua
+ - https://github.com/project-error/fivem-react-boilerplate-lua
 
 
 - Original Base Code
