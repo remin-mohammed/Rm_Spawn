@@ -1,4 +1,4 @@
-# 🛸 rm_spawn
+# rm_spawn
 Fivem - Spawn Selector
 a simple standalone spawn selector
 ![image](https://forum.cfx.re/uploads/default/original/4X/f/5/3/
@@ -7,7 +7,7 @@ a simple standalone spawn selector
 # 📥 Download 
 https://github.com/Anxxity/Rm_Spwan
 
-# 💥 Feature
+# Feature
 
 * Easy to add and remove locations via config
 * Trigger the resource via Exports.
@@ -18,7 +18,7 @@ https://github.com/Anxxity/Rm_Spwan
 property, job locations.
 *change ui colors in config.
 
-# ℹ️ How to use
+# How to use
 - this resource can be exported from your eg. multicharacters resource.
 ```
 local lastlocation = {x = coord.x, y = coord.y, z = coord.z, heading = coord.w}
@@ -98,3 +98,5 @@ This is purely not my stuff
 credits:- https://github.com/project-error/fivem-react-boilerplate-lua
 
 #disclaimer
+
+- Original Base Code
