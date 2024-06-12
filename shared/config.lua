@@ -2,6 +2,9 @@ Config = {}
 
 Config.PrimaryColor = 'blue'
 Config.PrimaryShade = 8
+Config.ButtonColor = 'blue'
+Config.BorderColor = 'blue'
+
 
 Config.Multicharacters = true -- if false. this resource will trigger everytime you spawned in the firsttime
 
