@@ -53,8 +53,8 @@ exports.Rm_Spawn:Selector(lastlocation,options)
 
 *A basic understanding of the modern web development workflow. If you don't 
 know this yet, React might not be for you just yet.*
-
-## Getting Started for ui
+<details>
+#<summary> Getting Started for ui </summary>
 
 First clone the repository or use the template option and place
 it within your `resources` folder
@@ -95,7 +95,7 @@ You can do this by running the following:
 npm run build
 yarn build 
 ```
-
+</details>
 # Disclaimer
 
 This is purely not my stuff  
