@@ -95,10 +95,13 @@ You can do this by running the following:
 npm run build
 yarn build 
 ```
-This is purely not my stuff  
-credits:- https://github.com/project-error/fivem-react-boilerplate-lua
 
-#disclaimer
+# Disclaimer
+
+This is purely not my stuff  
+credits:-
+ https://github.com/project-error/fivem-react-boilerplate-lua
+
 
 - Original Base Code
 https://github.com/renzuzu/renzu_spawn
