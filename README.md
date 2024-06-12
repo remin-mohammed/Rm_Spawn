@@ -26,7 +26,6 @@ exports.Rm_Spwan:Selector(lastlocation)
 ```
 #Note if resources name is changed
 
-- this resource can be exported from your eg. multicharacters resource.
 ```
 local lastlocation = {x = coord.x, y = coord.y, z = coord.z, heading = coord.w}
 exports.ResourceName:Selector(lastlocation)
