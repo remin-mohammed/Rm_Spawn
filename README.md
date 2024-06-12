@@ -10,6 +10,7 @@ https://github.com/Anxxity/Rm_Spwan
 
 # Feature
 
+* change ui colors in config.
 * Easy to add and remove locations via config
 * Trigger the resource via Exports.
 * Smooth Camera Transition
@@ -18,7 +19,7 @@ https://github.com/Anxxity/Rm_Spwan
 * Supports Custom location like personal      
 property, job locations.
 
-*change ui colors in config.
+
 
 # How to use
 - this resource can be exported from your eg. multicharacters resource.
