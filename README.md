@@ -97,4 +97,4 @@ yarn build
 This is purely not my stuff  
 credits:- https://github.com/project-error/fivem-react-boilerplate-lua
 
-#dis
+#disclaimer
