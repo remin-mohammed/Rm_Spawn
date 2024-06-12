@@ -16,6 +16,7 @@ https://github.com/Anxxity/Rm_Spwan
 * Supports non multicharacters too. by editing Config.multicharacters = false
 * Supports Custom location like personal      
 property, job locations.
+
 *change ui colors in config.
 
 # How to use
