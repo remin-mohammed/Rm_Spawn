@@ -6,7 +6,7 @@ a simple standalone spawn selector
 ![2024-06-1220-32-15-ezgif com-crop](https://github.com/Anxxity/Rm_Spawn/assets/90343571/68d74f5c-1333-47d6-ac51-a2d69a96b6f9)
 
 # 📥 Download 
-https://github.com/Anxxity/Rm_Spwan
+[https://github.com/Anxxity/Rm_Spwan](https://github.com/Anxxity/Rm_Spawn/)
 
 # Feature
 
