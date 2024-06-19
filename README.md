@@ -15,7 +15,8 @@ a simple standalone spawn selector
 * Trigger the resource via Exports.
 * Smooth Camera Transition
 * Standalone resource
-* Supports non multicharacters too. by editing Config.multicharacters = false
+* Supports non multicharacters too. by editing 
+ ``` Config.multicharacters = false```
 * Supports Custom location like personal      
 property, job locations.
 
